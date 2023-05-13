@@ -9,6 +9,14 @@ public class OrderRepository {
     private static Map<String,Order> orderMap=new HashMap<>();
     private static Map<String,DeliveryPartner> partnerMap=new HashMap<>();
 
+    public OrderRepository() {
+    }
+
+    public OrderRepository(Map<String, String> orderPartnerMap, Map<String, ArrayList<String>> partnerOrdersMap) {
+        this.orderPartnerMap = orderPartnerMap;
+        this.partnerOrdersMap = partnerOrdersMap;
+    }
+
     private  Map<String,String> orderPartnerMap=new HashMap<>();
 
     private  Map<String, ArrayList<String>> partnerOrdersMap=new HashMap<>();
