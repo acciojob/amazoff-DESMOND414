@@ -1,14 +1,13 @@
 package com.driver;
 
-import lombok.Getter;
-import lombok.Setter;
+
 
 import java.util.Arrays;
 import java.util.List;
 
-@Getter
-@Setter
+
 public class Order {
+
 
     private String id;
     private int deliveryTime;
@@ -20,8 +19,18 @@ public class Order {
         this.deliveryTime = covertDeliveryTime(deliveryTime);
         this.id = id;
     }
+    public Order() {
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setDeliveryTime(int deliveryTime) {
+        this.deliveryTime = deliveryTime;
+    }
 
     public void setDeliveryTime(String deliveryTime) {
+
         this.deliveryTime = covertDeliveryTime(deliveryTime);
     }
 
@@ -39,6 +48,8 @@ public class Order {
     public int getDeliveryTime() {
         return deliveryTime;
     }
+
+
 
     public static String convertDeliveryTime(int deliveryTime) {
         int HH = deliveryTime / 60;
